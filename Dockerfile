@@ -4,8 +4,8 @@ MAINTAINER Lauser, Nicolai <nicolai@lauser.info>
 
 LABEL container_type="data"
 
-RUN mkdir -p /app \
-    && addgroup app-cache \
+RUN addgroup app-cache \
+    && mkdir -p /app \
     && { \
         echo "#!/bin/sh"; \
         echo "rm -rf /app/var/logs/* /app/var/cache/*"; \
