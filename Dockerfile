@@ -10,6 +10,9 @@ RUN addgroup app-cache \
         echo "#!/bin/sh"; \
         echo "rm -rf /app/var/logs/* /app/var/cache/*"; \
         echo "chown -R :app-cache /app/var"; \
+        echo "while true; do"; \
+        echo "    sleep 1d"; \
+        echo "done"; \
     } > /permissions.sh \
     && chmod 775 /permissions.sh
 
